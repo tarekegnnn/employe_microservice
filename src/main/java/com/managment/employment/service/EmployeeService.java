@@ -15,19 +15,19 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
 
     public Employee addEmployee(Employee employee) {
-        return employeeRepository.save(employee);  // Saves the employee to the database
+        return employeeRepository.save(employee);
     }
 
     public List<Employee> getAllEmployees() {
-        return employeeRepository.findAll(); // Retrieves all employees from the repository
+        return employeeRepository.findAll();
     }
 
     public Optional<Employee> getEmployeeById(Long id) {
-        return employeeRepository.findById(id); // Retrieves the employee by ID
+        return employeeRepository.findById(id);
     }
 
     public boolean deleteEmployee(Long id) {
-        employeeRepository.deleteById(id); // Deletes the employee by ID
+        employeeRepository.deleteById(id);
         return false;
     }
 }

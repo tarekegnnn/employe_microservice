@@ -5,7 +5,7 @@ spring:
   application:
     name: employment
   datasource:
-    url: jdbc:mysql://localhost:3306/employments?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/employmentdb?createDatabaseIfNotExist=true
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
