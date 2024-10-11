@@ -2,16 +2,15 @@ package com.managment.employment.service;
 
 import com.managment.employment.model.Address;
 import com.managment.employment.repository.AddressRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@AllArgsConstructor
 public class AddressService {
 
-    @Autowired
+
     private AddressRepository addressRepository;
 
 

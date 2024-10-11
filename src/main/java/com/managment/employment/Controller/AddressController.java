@@ -17,20 +17,20 @@ public class AddressController {
     @Autowired
     private AddressService addressService;
 
-    // Endpoint to add a new address
+
     @PostMapping
     public ResponseEntity<Address> addAddress(@RequestBody Address address) {
         Address newAddress = addressService.addAddress(address);
         return new ResponseEntity<>(newAddress, HttpStatus.CREATED);
     }
 
-    // Endpoint to get all addresses
+
     @GetMapping
     public ResponseEntity<List<Address>> getAllAddresses() {
         return new ResponseEntity<>(addressService.getAllAddresses(), HttpStatus.OK);
     }
 
-    // Endpoint to get an address by its ID
+
     @GetMapping("/{id}")
     public ResponseEntity<Address> getAddressById(@PathVariable Long id) {
         Optional<Address> address = addressService.getAddressById(id);
@@ -38,7 +38,6 @@ public class AddressController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    // Endpoint to delete an address by its ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAddress(@PathVariable Long id) {
         if (addressService.deleteAddress(id)) {

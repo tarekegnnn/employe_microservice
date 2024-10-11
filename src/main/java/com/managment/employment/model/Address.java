@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
 @Entity
 @Table(name = "addresses")
 @Data
@@ -19,34 +17,24 @@ public class Address {
     @Column(name = "house_number")
     private String houseNumber;
 
-    @Column(name = "car_model")
-    private String carModel;
+    @Column(name = "street")
+    private String street;
 
-    @Column(name = "hired_date")
-    private LocalDate hiredDate;
+    @Column(name = "city")
+    private String city;
 
-    @Column(name = "end_date")
-    private LocalDate endDate;
+    @Column(name = "state")
+    private String state;
 
-    @Column(name = "marital_status")
-    private String maritalStatus;
+    @Column(name = "postal_code")
+    private String postalCode;
 
-    @Column(name = "pension_number")
-    private String pensionNumber;
+    @Column(name = "country")
+    private String country;
 
-    @Column(name = "dob")
-    private LocalDate dob;
+    @Column(name = "location")
+    private String location;
 
-    @Column(name = "age")
-    private Integer age;
-
-    @Column(name = "nationality")
-    private String nationality;
-
-    @Column(name = "tin_number")
-    private String tinNumber;
-
-
-
-
+    @Column(name = "phone_no")
+    private String phoneNo;
 }

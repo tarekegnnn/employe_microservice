@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -43,8 +44,11 @@ public class Employee {
     @Column(name = "salary")
     private String salary;
 
-    @OneToMany( cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "fk_emp_id",referencedColumnName = "emp_id")
+    @Column(name = "hired_date")
+    private LocalDate hiredDate;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "fk_emp_id", referencedColumnName = "emp_id")
     private List<Address> addresses;
 
 }

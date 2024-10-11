@@ -3,12 +3,11 @@ package com.managment.employment.service;
 import com.managment.employment.model.Employee;
 import com.managment.employment.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 @AllArgsConstructor
 public class EmployeeService {
 
@@ -25,10 +24,13 @@ public class EmployeeService {
     public Optional<Employee> getEmployeeById(Long id) {
         return employeeRepository.findById(id);
     }
+    public Employee updateEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
 
     public boolean deleteEmployee(Long id) {
         employeeRepository.deleteById(id);
-        return false;
+        return true;
     }
 }
 
